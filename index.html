@@ -35,6 +35,7 @@
     <!-- 파비콘 -->
     <link rel="icon" href="/trouble-vending-machine.github.io/favicon.ico" type="image/x-icon">
 
+
     <title>고민 해결 자판기</title>
     <link rel="stylesheet"
         href="https://github.com/trouble-vending-machine/trouble-vending-machine.github.io/blob/main/style.css" />
@@ -125,7 +126,7 @@
 
     <div class="container">
         <h1>🤖 고민 해결 자판기</h1>
-        <h4>고민 종류를 선택해주세요!</h4>
+        <h4 id="output">고민 종류를 선택해주세요!</h4>
 
         <div id="select-area">
             <label><input type="radio" name="category" value="연애" />연애</label>
@@ -345,6 +346,7 @@
         const resultArea = document.getElementById("result-area");
         const selectArea = document.getElementById("select-area");
         const radios = document.querySelectorAll('input[name="category"]');
+        const output = document.getElementById("output");
 
         function getConcern() {
             let selected = null;
@@ -359,6 +361,8 @@
 
             const list = concerns[selected];
             const randomMsg = list[Math.floor(Math.random() * list.length)];
+
+            output.innerHTML = "고민에 대한 해결책입니다!"
 
             resultArea.style.display = "block";
             resultArea.textContent = randomMsg;
@@ -376,6 +380,7 @@
                 radio.disabled = false;
             });
 
+            output.innerHTML = "고민 종류를 선택해 주세요!"
             resultArea.style.display = "none";
             resultArea.textContent = "";
 
