@@ -1,50 +1,38 @@
 body {
-  font-family: "Arial", sans-serif;
-  background: #f9f9f9;
-  text-align: center;
-  padding-top: 60px;
+  font-family: "나눔고딕", sans-serif;
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 0 20px;
+  background: #f5f7fa;
+  color: #333;
 }
-
-.container {
-  background: #fff;
-  padding: 30px;
-  border-radius: 12px;
-  width: 680px;
-  margin: 0 auto;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
 h1 {
   text-align: center;
   margin-bottom: 30px;
 }
-
 #select-area {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 10px 20px;
-  text-align: left;
-  margin: 20px 0;
-  max-height: 220px;
-  overflow-y: auto;
-  padding-right: 10px;
+  gap: 15px 10px;
+  margin-bottom: 20px;
 }
-
 label {
-  display: block;
-  margin-bottom: 8px;
-  font-size: 24px;
+  background: #fff;
+  border: 2px solid #bbb;
+  border-radius: 6px;
+  padding: 12px 10px;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  transition: border-color 0.3s;
+  user-select: none;
 }
-
 label:hover {
   border-color: #007bff;
 }
-
 input[type="radio"] {
   margin-right: 8px;
 }
-
 #result-area {
   background: #fff;
   border: 2px solid #007bff;
@@ -55,7 +43,6 @@ input[type="radio"] {
   line-height: 1.4;
   display: none;
 }
-
 button {
   background-color: #007bff;
   color: white;

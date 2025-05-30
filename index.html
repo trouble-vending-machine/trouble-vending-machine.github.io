@@ -3,32 +3,39 @@
 
 <head>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>고민 자판기</title>
     <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-    <div class="container">
-        <h1>🤖 고민 자판기</h1>
+    <audio id="click-sound" src="뾰로롱.mp3" preload="auto"></audio>
 
-        <div class="radio-group">
-            <label><input type="radio" name="category" value="연애" /> 연애</label>
-            <label><input type="radio" name="category" value="직장" /> 직장</label>
-            <label><input type="radio" name="category" value="학교" /> 학교</label>
-            <label><input type="radio" name="category" value="가족" /> 가족</label>
-            <label><input type="radio" name="category" value="진로" /> 진로</label>
-            <label><input type="radio" name="category" value="자존감" /> 자존감</label>
-            <label><input type="radio" name="category" value="우울" /> 우울</label>
-            <label><input type="radio" name="category" value="불안" /> 불안</label>
-            <label><input type="radio" name="category" value="외로움" /> 외로움</label>
-            <label><input type="radio" name="category" value="인간관계" /> 인간관계</label>
-            <label><input type="radio" name="category" value="기타" /> 기타</label>
+    <div class="container">
+        <h1>🤖 고민 해결 자판기</h1>
+        <h4>고민 종류를 선택해주세요!</h4>
+
+        <div id="select-area">
+            <label><input type="radio" name="category" value="연애" />연애</label>
+            <label><input type="radio" name="category" value="직장" />직장</label>
+            <label><input type="radio" name="category" value="학교" />학교</label>
+            <label><input type="radio" name="category" value="가족" />가족</label>
+            <label><input type="radio" name="category" value="진로" />진로</label>
+            <label><input type="radio" name="category" value="자존감" />자존감</label>
+            <label><input type="radio" name="category" value="우울" />우울</label>
+            <label><input type="radio" name="category" value="불안" />불안</label>
+            <label><input type="radio" name="category" value="외로움" />외로움</label>
+            <label><input type="radio" name="category" value="인간관계" />인간관계</label>
+            <label><input type="radio" name="category" value="기타" />기타</label>
         </div>
 
-        <button onclick="getConcern()">고민 뽑기 🎲</button>
-        <div id="output" class="output">고민 종류를 선택해주세요!</div>
-    </div>
+        <button id="getBtn">해결 메세지 보기🎲</button>
 
+
+        <div id="result-area"></div>
+        <button id="resetBtn">처음으로</button>
+        <button id="reserveBtn" style="display: none;">상담 예약하기</button>
+    </div>
     <script src="script.js"></script>
 </body>
 
