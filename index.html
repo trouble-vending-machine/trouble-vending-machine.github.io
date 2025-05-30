@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>고민 자판기</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <h1>🤖 고민 자판기</h1>
+
+        <div class="radio-group">
+            <label><input type="radio" name="category" value="연애" /> 연애</label>
+            <label><input type="radio" name="category" value="직장" /> 직장</label>
+            <label><input type="radio" name="category" value="학교" /> 학교</label>
+            <label><input type="radio" name="category" value="가족" /> 가족</label>
+            <label><input type="radio" name="category" value="진로" /> 진로</label>
+            <label><input type="radio" name="category" value="자존감" /> 자존감</label>
+            <label><input type="radio" name="category" value="우울" /> 우울</label>
+            <label><input type="radio" name="category" value="불안" /> 불안</label>
+            <label><input type="radio" name="category" value="외로움" /> 외로움</label>
+            <label><input type="radio" name="category" value="인간관계" /> 인간관계</label>
+            <label><input type="radio" name="category" value="기타" /> 기타</label>
+        </div>
+
+        <button onclick="getConcern()">고민 뽑기 🎲</button>
+        <div id="output" class="output">고민 종류를 선택해주세요!</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
